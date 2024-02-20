@@ -17,6 +17,10 @@ const nextConfig = {
 		config.externals.push({ canvas: 'commonjs canvas' })
 		return config
 	  },
+	
+	  experimental: {
+		appDir: true,
+	  },
 };
 
 export default nextConfig;
