@@ -13,8 +13,9 @@ const nextConfig = {
 		config.externals.push({
 			"utf-8-validate": "commonjs utf-8-validate",
 			"bufferutil": "commonjs bufferutil",
-			canvas: "commonjs canvas",
+			canvas: "commonjs canvas",			
 		})
+		config.resolve.alias.canvas = false;
 		return config;
 	},	
 	images: {
