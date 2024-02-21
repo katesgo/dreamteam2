@@ -1,6 +1,11 @@
 import './src/env.mjs';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	reactStrictMode: true,
+  	experimental: {
+    appDir: true,
+    esmExternals: "loose", // required to make Konva & react-konva work
+  },
 	webpack: (
 		config,
 		{ buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
