@@ -1,16 +1,13 @@
 import './src/env.mjs';
 /** @type {import('next').NextConfig} */
 const nextConfig = {	
-	webpack: (
-		config,
-		{ buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
-		) => {
+	webpack: (config) => {
 		config.externals.push({
 			"utf-8-validate": "commonjs utf-8-validate",
 			"bufferutil": "commonjs bufferutil",
 			canvas: "commonjs canvas",			
 		})
-		config.resolve.alias.canvas = false;
+		
 		return config;
 	},	
 	images: {
