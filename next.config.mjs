@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
-	  remotePatterns: [
+		unoptimized: true,
+		remotePatterns: [
 		{
 		  protocol: "https",
 		  hostname: "liveblocks.io",
@@ -22,7 +23,8 @@ const nextConfig = {
 	},
 	typescript: {
 		ignoreBuildErrors: true,
-	}
+	},
+	output: "export",
   };
   
   export default nextConfig;
